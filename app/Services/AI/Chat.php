@@ -39,7 +39,7 @@ class Chat
             $yourApiKey = config('openai.anyscale_api_key');
             $yourOrganization = config('openai.anyscale_organization');
             $apiEndpoint = config('openai.anyscale_api_endpoint');
-        } if ('Groq' === AIModels::toArray()[$model->value]['provider']) {
+        } elseif ('Groq' === AIModels::toArray()[$model->value]['provider']) {
             $yourApiKey = config('openai.groq_api_key');
             $yourOrganization = config('openai.groq_organization');
             $apiEndpoint = config('openai.groq_api_endpoint');
